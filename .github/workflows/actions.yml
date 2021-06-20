@@ -12,4 +12,4 @@ jobs:
         with:
           who-to-greet: Nhan #Input varaible spec found in action repo documentation
       - name: Log Greeting Time
-        run: "${{ steps.greet.outputs.time }}"
+        run: echo "${{ steps.greet.outputs.time }}"
