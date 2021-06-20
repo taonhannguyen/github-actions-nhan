@@ -19,6 +19,7 @@ jobs:
         shell: python
   run-windows-commands:
     runs-on: windows-latest
+    needs: [run-shell-commands] #ensure this job will run after job ids in array, in case of dependency
     steps:
       - name: Directory Powershell #windows default shell
         run: Get-Location
