@@ -7,4 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Simple JS Action
+        id: greet
         uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: Nhan #Input varaible spec found in action repo documentation
+      - name: Log Greeting Time
+        run: "${{ steps.greet.outputs.time }}"
