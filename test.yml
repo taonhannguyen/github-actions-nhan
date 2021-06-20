@@ -1,0 +1,7 @@
+name : Nhan
+age : 42
+address : "test : 123"
+active : true
+someObject :
+  beer : 2
+  wine : 3
