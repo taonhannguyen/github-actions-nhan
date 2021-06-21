@@ -2,8 +2,16 @@ name : Actions workflow
 
 #on: [push, pull_request]
 on:
-  repository_dispatch:
-    types: [build]
+  push:
+    branches:
+      - master
+      - 'feature/*' #matches feature/ anything
+    # tags:
+    #   - v1.*
+    # paths:
+    #   - '**.js' #will run if a .js file has been pushed
+  # repository_dispatch:
+  #   types: [build]
   # schedule:
   #   - cron: "* * * * *"
   # push:
