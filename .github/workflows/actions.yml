@@ -2,7 +2,7 @@ name : Actions workflow
 
 #on: [push, pull_request]
 on:
-  push:
+  pull_request:
     branches:
       - master
       - 'feature/*' #matches feature/ anything
